@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'todo.dart';
-import 'signup.dart';
 
-class LoginScreen extends StatelessWidget {
+class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,34 +28,23 @@ class LoginScreen extends StatelessWidget {
             ),
             SizedBox(height: 60.0),
             Text(
-              'Ready to get back into productivity?',
+              'Welcome back to Task Tally!',
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 24.0,
                 fontWeight: FontWeight.bold,
                 fontFamily: 'Calibri',
               ),
+              textAlign: TextAlign.center,
             ),
+            SizedBox(height: 1.0),
             Text(
-              'Log in and get started.',
+              'Boost productivity with your task ally!',
               style: TextStyle(
-                fontSize: 14.0,
+                fontSize: 16.0,
+                color: Colors.black,
                 fontFamily: 'Calibri',
               ),
-            ),
-            SizedBox(height: 16.0),
-            TextFormField(
-              decoration: InputDecoration(
-                labelText: 'Email',
-                prefixIcon: Icon(Icons.account_circle),
-              ),
-            ),
-            SizedBox(height: 12.0),
-            TextFormField(
-              decoration: InputDecoration(
-                labelText: 'Password',
-                prefixIcon: Icon(Icons.lock),
-              ),
-              obscureText: true,
+              textAlign: TextAlign.center,
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
@@ -71,36 +59,15 @@ class LoginScreen extends StatelessWidget {
                 minimumSize: MaterialStateProperty.all(Size(double.infinity, 48.0)),
               ),
               child: Text(
-                'Login',
+                'Get Started',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                 ),
               ),
             ),
-            SizedBox(height: 8.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Don't have an account? "),
-                TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SignUpScreen()),
-                    );
-                  },
-                  child: Text(
-                    'Sign Up',
-                    style: TextStyle(
-                      color: Colors.deepPurple,
-                      fontWeight: FontWeight.bold
-                    ),),
-                ),
-              ],
-            ),
           ],
-        )
+        ),
       ),
     );
   }

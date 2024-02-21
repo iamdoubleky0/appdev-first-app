@@ -17,8 +17,9 @@ class TodoApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Task Tally',
-      home: LoginScreen(),
+      home: WelcomeScreen(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }
+

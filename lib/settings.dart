@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:notes/login.dart';
 import 'package:provider/provider.dart';
 import 'theme.dart';
 
@@ -52,45 +51,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Theme.of(context).floatingActionButtonTheme.backgroundColor,
-        onPressed: () {
-          _showLogoutConfirmation(context);
-        },
-        child: Icon(Icons.exit_to_app, color: Theme.of(context).floatingActionButtonTheme.foregroundColor),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-    );
-  }
-
-//-------------------LOGOUT BUTTON------------------//
-  void _showLogoutConfirmation(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text('Logout'),
-          content: Text('Are you sure you want to logout?'),
-          actions: <Widget>[
-            TextButton(
-              child: Text('Cancel'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-            TextButton(
-              child: Text('Logout'),
-              onPressed: () {
-                // Perform logout action here
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
-                );
-              },
-            ),
-          ],
-        );
-      },
-    );
+    ); 
   }
 }
